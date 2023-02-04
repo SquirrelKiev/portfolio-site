@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .link {
+        @apply text-slate-500 transition-colors duration-100;
+    }
+    
+    .link:hover {
+        @apply text-slate-200;
+    }
+
+    .link:active {
+        @apply text-white;
+    }
+    
+    a {
+        @apply link;
+    }
+    
+    h1 {
+        @apply text-5xl font-sans-head;
+    }
+    h2 {
+        @apply text-4xl font-sans-head;
+    }
+    h3 {
+        @apply text-3xl font-sans-head;
+    }
+    h4 {
+        @apply text-2xl font-sans-head;
+    }
+    h5 {
+        @apply text-xl font-sans-head;
+    }
+}
+

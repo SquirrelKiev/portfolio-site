@@ -1,0 +1,18 @@
+[
+    {
+        "display": "Home",
+        "href": "/"
+    },
+    {
+        "display": "Work",
+        "href": "/work"
+    },
+    {
+        "display": "Projects",
+        "href": "/projects"
+    },
+    {
+        "display": "Blog",
+        "href": "/blog"
+    }
+]

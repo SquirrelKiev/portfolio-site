@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "autoprefixer": "^10.4.13",
+    "eleventy-plugin-feathericons": "^1.0.1",
+    "eleventy-plugin-postcss": "^1.0.4",
+    "postcss": "^8.4.21",
+    "postcss-minify": "^1.1.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  }
+}

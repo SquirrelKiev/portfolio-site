@@ -1,0 +1,28 @@
+---
+layout: base
+links:
+- { display: Professional Work, href: "/work" }
+- { display: Personal Projects, href: "#" }
+- { display: Blog, href: "#" }
+---
+<div class="flex justify-center h-full items-center flex-col">
+    <div class="flex flex-col items-end">
+        <h1 class="uppercase md:text-7xl text-5xl font-bold">some heading</h1>
+        {# <h2 class="uppercase md:text-5xl text-3xl font-semibold mt-3">maybe a h2 with it?</h2> #}
+        <ul class="flex flex-col items-end">
+            {% for link in links %}
+            <li class="w-full mt-5 md:text-5xl text-3xl text-right">
+                <a href="{{link.href}}" class="ml-auto flex justify-end items-center transition duration-100 origin-right hover:scale-110">
+                    {{link.display}}
+                    {% feather "chevron-right" %}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="flex justify-center mb-8">
+    {% for item in socials %}
+    <a class="mx-4" href="{{item.href}}" target="_blank">{% feather item.feather %}</a>
+    {% endfor %}
+</div>

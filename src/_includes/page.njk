@@ -1,0 +1,34 @@
+---
+layout: base
+---
+<nav class="flex items-center flex-wrap bg-slate-800 shadow-md p-6">
+    {# <div class="flex items-center flex-shrink-0 text-white mr-6"> <!-- a logo or smth would go here --></div> #}
+    <div class="block md:hidden ml-auto">
+        <button onclick="toggleNav()" class="flex items-center px-3 py-2 link">
+            {% feather "menu", { "class": "w-6 h-6", "id": "navbar-button-ham" } %}
+            {% feather "x", { "class": "w-6 h-6 hidden", "id": "navbar-button-x" } %}
+        </button>
+    </div>
+    <div class="w-full flex-grow md:flex md:items-center md:w-auto hidden" id="navbar-content">
+        <div class="md:flex md:flex-row md:flex-grow md:justify-center">
+            {% for page in navbar %}
+            <a href="{{ page.href }}" class="block mt-4 md:mt-0 mx-4 text-slate-400">
+                {{ page.display }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>
+<div class="h-full">
+    {{ content | safe }}
+</div>
+<footer class="flex  mt-auto p-5 bg-slate-800 justify-center">
+    <div>
+        <div class="flex justify-between mb-5">
+            {% for item in socials %}
+            <a href="{{item.href}}" target="_blank">{% feather item.feather %}</a>
+            {% endfor %}
+        </div>
+        <span class="text-center text-slate-400">Copyright © {{ misc.currentYear() }} Ethan Ginns-Farrow.</span>
+    </div>
+</footer>
